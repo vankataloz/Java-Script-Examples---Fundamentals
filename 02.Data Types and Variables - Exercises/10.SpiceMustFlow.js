@@ -1,5 +1,5 @@
 function spiceMustFlow(startingYield) {
-    let minedSpices = 0;
+  /* let minedSpices = 0;
     let consumedSpices = 0;
     let daysCount = 0;
     while (startingYield >= 100) {
@@ -14,5 +14,19 @@ function spiceMustFlow(startingYield) {
     }
     console.log(daysCount);
     console.log(resultOfMining);
+    */
+  let minedSpices = 0;
+  let daysCount = 0;
+  while (startingYield >= 100) {
+    daysCount++;
+    minedSpices += startingYield - 26;
+    startingYield -= 10;
+  }
+  console.log(daysCount);
+  if (daysCount != 0) {
+    console.log(minedSpices - 26);
+  } else {
+    console.log(minedSpices);
+  }
 }
-spiceMustFlow(0);
+spiceMustFlow(111);
